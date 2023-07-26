@@ -47,5 +47,8 @@ public class Person {
         return age <= 19 && age >= 13;
     }
 
-
+    @Override
+    public String toString() {
+        return String.format("Firstname : %s, Lastname:%s, Age:%d",firstName,lastName,age);
+    }
 }

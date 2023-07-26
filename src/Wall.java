@@ -4,8 +4,8 @@ public class Wall {
     double height;
 
     public Wall(double width, double height) {
-        this.width = width;
-        this.height = height;
+        checkWidth(width);
+        checkHeight(height);
     }
 
     public double getWidth() {
@@ -16,22 +16,31 @@ public class Wall {
         return height;
     }
 
-    public double setWidth(double number) {
-        width = number;
-        if (number < 0) {
-            width = 0;
-        }
-        return width;
+    public void setWidth(double width) {
+        checkWidth(width);
     }
 
-    public double setHeight(double number) {
-        height = number;
-        if (number < 0) {
-            height = 0;
-        }
-        return height;
+    public void setHeight(double height) {
+        checkHeight(height);
     }
 
+    public void checkWidth(double width) {
+        if (width < 0) {
+            this.width = 0;
+        } else {
+            this.width = width;
+        }
+
+    }
+
+    public void checkHeight(double height) {
+        if (height < 0) {
+            this.height = 0;
+        } else {
+            this.height = height;
+        }
+
+    }
 
     public double getArea() {
         return width * height;

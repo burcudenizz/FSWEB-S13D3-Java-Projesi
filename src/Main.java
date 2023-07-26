@@ -7,6 +7,7 @@ public class Main {
         System.out.println("Age: " + person.getAge());
         System.out.println(person.isTeen(15));
         System.out.println(person.isTeen(20));
+        System.out.println(person);
 
         System.out.println("-------Wall Class------");
         Wall wall = new Wall(5, 4);
