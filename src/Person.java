@@ -1,5 +1,5 @@
 public class Person {
-
+    //instance variables
     String firstName;
     String lastName;
     int age;
